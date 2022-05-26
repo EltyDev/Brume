@@ -8,7 +8,7 @@
 - [CTM-MC1.16.1-1.1.2.6.jar](https://www.curseforge.com/minecraft/mc-mods/ctm/files/3137659) (by [tterrag1098](https://www.curseforge.com/members/tterrag1098/projects))
 - [EnderStorage-1.16.5-2.8.0.170-universal.jar](https://www.curseforge.com/minecraft/mc-mods/ender-storage-1-8/files/3737982) (by [covers1624](https://www.curseforge.com/members/covers1624/projects))
 - [JEITweaker-1.16.5-1.1.0.49.jar](https://www.curseforge.com/minecraft/mc-mods/jeitweaker/files/3584024) (by [Jaredlll08](https://www.curseforge.com/members/Jaredlll08/projects))
-- [Afterlight](v2.0.jar/files/https://www.curseforge.com/minecraft/mc-mods/the-afterlight) (by [3646154	Wispearl](https://www.curseforge.com/members/3646154	Wispearl/projects))
+- [Afterlight-v2.0.jar](https://www.curseforge.com/minecraft/mc-mods/the-afterlight/files/3646154) (by [Wispearl](https://www.curseforge.com/members/Wispearl/projects))
 - [appleskin-forge-mc1.16.x-2.4.0.jar](https://www.curseforge.com/minecraft/mc-mods/appleskin/files/3686480) (by [squeek502](https://www.curseforge.com/members/squeek502/projects))
 - [Cucumber-1.16.5-4.1.12.jar](https://www.curseforge.com/minecraft/mc-mods/cucumber/files/3507886) (by [BlakeBr0](https://www.curseforge.com/members/BlakeBr0/projects))
 - [architectury-1.32.63.jar](https://www.curseforge.com/minecraft/mc-mods/architectury-api/files/3801558) (by [shedaniel](https://www.curseforge.com/members/shedaniel/projects))
