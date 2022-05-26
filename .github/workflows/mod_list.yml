@@ -35,7 +35,7 @@ jobs:
           git config --global user.name "Github - Action"
           git config --global user.email "noreply@github.com"
           git add MODLIST.md
-          git commit -m "Regenerate MODLIST.md"
+          git commit -m "Regenerate MODLIST.md" || true
       - name: Push the updated file
         uses: ad-m/github-push-action@master
         with:
