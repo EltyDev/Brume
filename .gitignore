@@ -19,3 +19,6 @@ usercache.json
 usernamecache.json
 options.txt
 config/
+optionsof.txt
+imgui.ini
+/crash-reports
