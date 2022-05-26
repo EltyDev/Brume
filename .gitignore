@@ -1,6 +1,16 @@
-defaultconfigs
-logs
-mods
-resourcepacks
-saves
+# Add the following to your gitignore:
+
+# Instance Sync
+**/*.jar
+!InstanceSync*.jar
+**/*.jar.disabled
+**/*.jar.meta
+
+# Optional: Generic Modpack Ignores
+logs/
+/.mixin.out
+/saves
+/downloads
+/resourcepacks
 .curseclient
+options.txt
