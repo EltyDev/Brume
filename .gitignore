@@ -1,12 +1,7 @@
-# Add the following to your gitignore:
-
-# Instance Sync
 **/*.jar
 !InstanceSync*.jar
 **/*.jar.disabled
 **/*.jar.meta
-
-# Optional: Generic Modpack Ignores
 logs/
 /.mixin.out
 /saves
@@ -22,3 +17,6 @@ config/
 optionsof.txt
 imgui.ini
 /crash-reports
+patchouli_data.json
+woot/
+screenshots/
