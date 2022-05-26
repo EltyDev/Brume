@@ -20,3 +20,6 @@ imgui.ini
 patchouli_data.json
 woot/
 screenshots/
+optionsshaders.txt
+shaderpacks/
+server.dat*
