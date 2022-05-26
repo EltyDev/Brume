@@ -20,7 +20,7 @@ jobs:
           cat minecraftinstance.json | jq ".installedAddons [] | .installedFile.id" | sed 's/\"//g' > files_id
           cat minecraftinstance.json | jq ".installedAddons [] | .addonID" | sed 's/\"//g' > ids
           while read id; do
-              wget "http://api.curseforge.com/v1/mods/$id" --header "Accept: application/json" --header "x-api-key: { secrets.CURSE_API_KEY }" -O output
+              wget "http://api.curseforge.com/v1/mods/$id" --header "Accept: application/json" --header "x-api-key: ${{ secrets.CURSE_API_KEY }}" -O output
               cat output | jq ".data.authors [0].name" | sed 's/\"//g' >> authors
               cat output | jq ".data.links.websiteUrl" | head -n 30 | sed 's/\"//g' >> mods_link
           done < ids
