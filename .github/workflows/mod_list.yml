@@ -27,7 +27,7 @@ jobs:
           done < ids
           echo -e "## Brume\n" >> MODLIST.md
           paste mods_name mods_link files_id authors | while read mod_name mod_link file_id author; do
-              echo "- [$mod_name](https://www.curseforge.com/minecraft/$mod_link/files/$mod_id) (by [$author](https://www.curseforge.com/members/$mod_id/projects))" >> MODLIST.md
+              echo "- [$mod_name](https://www.curseforge.com/minecraft/$mod_link/files/$file_id) (by [$author](https://www.curseforge.com/members/$author/projects))" >> MODLIST.md
           done
           rm -f mods_name files_id ids output authors mods_link
       - name: Commiting
