@@ -31,7 +31,7 @@ jobs:
           rm -f mods_name files_id ids output authors mods_link
       - name: Commiting
         run: |
-          git add MODLIST.mod
+          git add MODLIST.md
           git commit -m "Regenerate MODLIST.md"
       - name: Push the updated file
         uses: ad-m/github-push-action@master
