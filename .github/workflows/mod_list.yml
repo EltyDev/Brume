@@ -1,0 +1,42 @@
+name: Auto-generator of MODLIST.md
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Writing file
+        run: |
+          rm -f MODLIST.md
+          cat minecraftinstance.json | jq ".installedAddons [] | .installedFile.fileName" | sed 's/\"//g' > mods_name
+          cat minecraftinstance.json | jq ".installedAddons [] | .installedFile.id" | sed 's/\"//g' > files_id
+          cat minecraftinstance.json | jq ".installedAddons [] | .addonID" | sed 's/\"//g' > ids
+          while read id; do
+              wget "http://api.curseforge.com/v1/mods/$id" --header "Accept: application/json" --header "x-api-key: { secrets.CURSE_API_KEY }" -O output
+              cat output | jq ".data.authors [0].name" | sed 's/\"//g' >> authors
+              cat output | jq ".data.links.websiteUrl" | head -n 30 | sed 's/\"//g' >> mods_link
+          done < ids
+          echo -e "## Brume\n" >> MODLIST.md
+          paste mods_name mods_link files_id authors | while read mod_name mod_link file_id author; do
+              echo "- [$mod_name](https://www.curseforge.com/minecraft/$mod_link/files/$mod_id) (by [$author](https://www.curseforge.com/members/$mod_id/projects))" >> MODLIST.md
+          done
+          rm -f mods_name files_id ids output authors mods_link
+      - name: Commiting
+        run: |
+          git config --global user.name "Venodez"
+          git config --global user.email "venodez@gmail.com"
+          git add MODLIST.md
+          git commit -m "Regenerate MODLIST.md"
+      - name: Push the updated file
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
