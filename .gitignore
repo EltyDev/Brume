@@ -14,3 +14,8 @@ logs/
 /resourcepacks
 .curseclient
 options.txt
+journeymap/
+usercache.json
+usernamecache.json
+options.txt
+config/
