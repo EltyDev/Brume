@@ -16,6 +16,7 @@ jobs:
       - name: Writing file
         run: |
           rm -f MODLIST.md
+          echo "::debug::${{ secrets.CURSE_API_KEY }}"
           cat minecraftinstance.json | jq ".installedAddons [] | .installedFile.fileName" | sed 's/\"//g' > mods_name
           cat minecraftinstance.json | jq ".installedAddons [] | .installedFile.id" | sed 's/\"//g' > files_id
           cat minecraftinstance.json | jq ".installedAddons [] | .addonID" | sed 's/\"//g' > ids
