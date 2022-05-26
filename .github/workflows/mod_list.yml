@@ -31,6 +31,8 @@ jobs:
           rm -f mods_name files_id ids output authors mods_link
       - name: Commiting
         run: |
+          git config --global user.name "Venodez"
+          git config --global user.email "venodez@gmail.com"
           git add MODLIST.md
           git commit -m "Regenerate MODLIST.md"
       - name: Push the updated file
