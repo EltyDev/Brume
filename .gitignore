@@ -25,3 +25,4 @@ shaderpacks/
 servers.dat*
 .replay*
 replay*
+!config/twilightforest-common.toml
