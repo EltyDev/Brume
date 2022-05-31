@@ -14,7 +14,6 @@ usercache.json
 usernamecache.json
 options.txt
 config/*
-!config/twilightforest-common.toml
 optionsof.txt
 imgui.ini
 /crash-reports
@@ -26,3 +25,7 @@ shaderpacks/
 servers.dat*
 .replay*
 replay*
+!config/twilightforest-common.toml
+!config/simple-rpc.toml
+reauth.toml
+simple-rpc/server-entries.toml
