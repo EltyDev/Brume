@@ -13,7 +13,8 @@ journeymap/
 usercache.json
 usernamecache.json
 options.txt
-config/
+config/*
+!config/twilightforest-common.toml
 optionsof.txt
 imgui.ini
 /crash-reports
@@ -25,4 +26,3 @@ shaderpacks/
 servers.dat*
 .replay*
 replay*
-!config/twilightforest-common.toml
