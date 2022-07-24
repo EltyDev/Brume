@@ -249,4 +249,11 @@ craftingTable.removeByRegex("storagedrawers:.*_full_drawers_.*");
 craftingTable.removeByRegex("storagedrawers:.*_half_drawers_.*");
 craftingTable.removeByName("rftoolsbase:machine_frame");
 craftingTable.removeByName("thermal:machine_frame");
-craftingTable.removeByName("mekanism:steel_casing");    
+craftingTable.removeByName("mekanism:steel_casing");
+craftingTable.removeByName("enderstorage:ender_chest");
+
+craftingTable.addShaped("ender_chest", <item:enderstorage:ender_chest>, [
+    [<item:minecraft:blaze_rod>, <tag:items:forge:wool>, <item:minecraft:blaze_rod>],
+    [<item:minecraft:obsidian>, <item:mekanism:personal_chest>, <item:minecraft:obsidian>],
+    [<item:minecraft:blaze_rod>, <item:minecraft:ender_pearl>, <item:minecraft:blaze_rod>]
+]);
